@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>project</title>
+    <link rel="stylesheet" href="proj.css">
+  </head>
+  
+  <body>
+    <header>
+      <nav class="nav">
+      <div class="bu">
+          <button class="m">menu</button>
+          <button  class="o">order</button>
+          <button  class="l">Braches</button>
+          <button  class="a">about us</button>
+          <button  class="ac">Register</button>
+      </div>
+      </nav>
+    </header>
+    <main>
+      <div class="back">
+        <img class="background"
+        src="monte-rosa.jpg">
+        <div class="tex">
+          <p class="s">Zaitton</p>
+          <p class="sa">Muli-cuisine restaurnant</p>
+          <button class="but">Book now</button>
+        </div>
+        <div class="det-bar">
+        </div>
+        <div class="cards">
+          <div class="dish">
+            <img src="images.jpg" class="lux">
+            <div class="di">
+              <h1 class="des">Costly Crab Meat</h1>
+              <p class="sub">Enjoy the premium American luxury dinner the CRAB FELICITIA only at Zaitton</p>
+            </div>
+          </div>
+          
+            <div class="found">
+              <img src="4hme8k9lb4of1.jpeg" class="lux">
+            <div class="di">
+              <h1 class="de">Founder of Zaitton</h1>
+              <p class="su">Our great founder Benedict Winston founded Zaitton way back in 1976. After his death in 2006 this restaurant carries his Legacy for over 50 years. </p>
+            </div>
+            </div>
+            <div class="award">
+              <img src="images.png" class="awa">
+              <div class="di">
+                <h1 class="des">The Award</h1>
+                <p class="sue">Zaitton was awarded as luxury dining restaurant in 1986 by world class restaurants
+                </p>
+              </div>
+              </div>
+            
+            <div class="ohour">
+              <imG src="premium_photo-1661883237884-263e8de8869b.avif" class="lu">
+            <div class="di">
+              <h1 class="de">Opening Hours</h1>
+              <p class="su">Monday: 9:30 AM - 8:30PM<br>Tuesday: 9:30 AM - 8:30PM<br>Wednesday: 9:30 AM - 8:30PM<br>Thursday: 9:30 AM - 8:30PM<br>Friday: 9:30 AM - 8:30PM</p> 
+            </div>
+          </div>
+      </div>
+    </main>
+    <footer>
+      <div class="foot">
+        <div class="fi">
+          <img src="unnamed.png" class="logo">
+        </div>
+        <div class="cr"> 
+          <hr class="li">  
+          <p class="te">Copyright Zaitton</p></div>
+        </div>
+      </div>
+    </footer>
+    <SCript>
+    const sec=document.body.querySelector('.det-bar');
+    const text=document.body.querySelector('.text');
+    console.log(sec);
+    const but=document.body.querySelectorAll('button');
+    function screen(){
+      but.forEach(bu =>{
+            bu.addEventListener('mouseenter',(event)=>{
+              if(event.target.classList.contains('m')){
+              setTimeout(()=>{sec.innerHTML=`<div class="dis"><h1>Dishes
+                </h1><p>chicken stake</p><p>Tandoori</p><p>pork molten</p></div>
+                <div class="drink"><h1>Drinks</h1><p>vodka</p><p>rum</p><p>whisky</p><p>Gin</p></div>`
+                sec.style.cssText=`display: flex;
+                justify-content: space-evenly;
+                width: 49%;flex-wrap: nowrap`
+                if(window.innerWidth >= 1200){
+                  sec.style.cssText=`position: fixed;display: flex;bottom: 20;
+                justify-content: space-evenly;width: 35%;`
+                }},100);
+              }
+              else if(event.target.classList.contains('o')){
+                setTimeout(()=>{sec.innerHTML=`
+                <div class="cno">
+                <h1>Contact number</h1>
+                  <p>+1 145-748-8521<p></div><div class="ap"><h1>application</h1><p>ZaiFood</p></div>`
+                sec.style.cssText=`left: 19%; width: 24%;flex-wrap: nowrap`;
+                if(window.innerWidth >= 1200){
+                  sec.style.cssText=`left: 23%; width: 17%`;
+                }},100);
+
+              }
+              else if(event.target.classList.contains('l')){
+                setTimeout(()=>{sec.innerHTML=`
+                <div class="bra">
+                <h1>Branch</h1>
+                <p>London</p><p>New York</p><p>Paris</p>
+                <p>Los Angeles</p></div>`
+                sec.style.cssText=`width: 25%; left:36%;flex-wrap: nowrap;`;
+                if(window.innerWidth >= 1200){
+                  sec.style.cssText=`left: 39%; width: 18%`;
+                }},100);}
+              });
+            sec.addEventListener('mouseleave',()=>{
+              sec.innerHTML="";
+            }) 
+          })};
+        screen();
+  </SCript>
+  </body>
+</html>
